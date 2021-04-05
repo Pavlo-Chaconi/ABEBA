@@ -10,11 +10,11 @@ def main():
     drop_down_menu_builds = Select(element_of_builds)
     drop_down_menu_builds.select_by_visible_text("Prototype")
 
-    first_str_field_elem = driver.find_element_by_id("strber1Field")
-    first_str_field_elem.send_keys("gs")
+    first_num_field_elem = driver.find_element_by_id("number1Field")
+    first_num_field_elem.send_keys("gs")
 
-    second_str_field_elem = driver.find_element_by_id("strber2Field")
-    second_str_field_elem.send_keys("bu")
+    second_num_field_elem = driver.find_element_by_id("number2Field")
+    second_num_field_elem.send_keys("bu")
 
     element_of_operation_menu = driver.find_element_by_id("selectOperationDropdown")
     drop_down_menu_operations = Select(element_of_operation_menu)
@@ -23,8 +23,8 @@ def main():
     button = driver.find_element_by_id("calculateButton")
     button.click()
 
-    third_str_field_elem = driver.find_element_by_id("numberAnswerField")
-    if third_str_field_elem.get_property("value") == "gsbu":
+    third_num_field_elem = driver.find_element_by_id("numberAnswerField")
+    if third_num_field_elem.get_property("value") == "gsbu":
         print("Тест пройден!")
 
     else:
